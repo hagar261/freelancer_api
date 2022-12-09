@@ -7,6 +7,9 @@ require("dotenv").config();
 const app = express();
 const port = process.env.PORT;
 DBconnection();
+const cors = require('cors');
+app.use(cors());
+
 app.use(express.json())
 app.use(userServer)
 app.use(blogServer)
