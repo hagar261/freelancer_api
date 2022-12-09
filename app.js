@@ -1,10 +1,11 @@
-const DBconnection = require("./configration/config");
+
 const express = require('express');
 const userServer = require("./modules/users/routes/user.routes");
 const blogServer = require("./modules/blogs/routes/blog.route");
 const ApplicantServer = require("./modules/applicant/routes/applicant.routes");
 const app = express();
 require("dotenv").config().parsed;
+const DBconnection = require("./configration/config");
 const port = process.env.PORT;
 DBconnection();
 app.use(express.json())
