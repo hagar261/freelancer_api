@@ -4,7 +4,7 @@ const userServer = require("./modules/users/routes/user.routes");
 const blogServer = require("./modules/blogs/routes/blog.route");
 const ApplicantServer = require("./modules/applicant/routes/applicant.routes");
 const app = express();
-require("dotenv").config().parsed;
+require("dotenv").config();
 const DBconnection = require("./configration/config");
 const port = process.env.PORT;
 DBconnection();
